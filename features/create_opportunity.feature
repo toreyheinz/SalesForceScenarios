@@ -1,6 +1,6 @@
-Feature: Create Lead
+Feature: Create Opportunity
 
-Scenario: Create a new lead
+Scenario: Create a new Opportunity
   Given I log in
   And I click on "Opportunities"
   And I click on "New"
