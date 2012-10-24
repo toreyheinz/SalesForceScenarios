@@ -8,8 +8,18 @@ Then /^I should see "([^\"]*)" within "([^\"]*)"$/ do |text, within|
   end
 end
 
-Given /^I click on "(.*?)"$/ do |text|
+Given /^I click on "([^\"]*)"$/ do |text|
   click_on text
+end
+
+Given /^I click on "([^\"]*)" within "([^\"]*)"$/ do |text, within|
+  within(within) do
+    click_on text
+  end
+end
+
+Given /^I click on 'Create New'$/ do
+  find('#createNewButton').click
 end
 
 Then /^I enter "(.*?)" for "(.*?)"$/ do |value, field|
